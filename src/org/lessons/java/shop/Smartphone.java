@@ -32,4 +32,12 @@ public class Smartphone extends Prodotto {
         this.memoriaInterna = memoriaInterna;
     }
 
+    // Override del metodo toString per una rappresentazione leggibile
+    @Override
+    public String toString() {
+        return "Smartphone - Codice: " + codice + ", Nome: " + nome + ", Marca: " + marca +
+                ", Prezzo: " + prezzo + "€, IVA: " + iva + "%, IMEI: " + imei +
+                ", Memoria: " + memoriaInterna + "GB";
+    }
+
 }

@@ -30,4 +30,12 @@ public class Televisori extends Prodotto {
     public void setSmartTv(boolean smartTv) {
         this.smartTv = smartTv;
     }
+
+    // Override del metodo toString per una rappresentazione leggibile
+    @Override
+    public String toString() {
+        return "Televisore - Codice: " + codice + ", Nome: " + nome + ", Marca: " + marca +
+                ", Prezzo: " + prezzo + "€, IVA: " + iva + "%, Dimensione: " + dimensione +
+                " pollici, Smart TV: " + (smartTv ? "Sì" : "No");
+    }
 }

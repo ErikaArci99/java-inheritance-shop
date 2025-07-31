@@ -6,19 +6,15 @@ public class Carrello {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Quanti prodotti vuoi inserire? ");
-        // Input per il numero di prodotti
-        // Assumiamo che l'utente inserisca un numero valido
+        System.out.print("Quanti prodotti vuoi inserire nel carrello? ");
         int n = Integer.parseInt(scanner.nextLine());
 
-        // Creazione di un array per memorizzare i prodotti
         Prodotto[] carrello = new Prodotto[n];
 
-        // Ciclo per l'inserimento dei prodotti
         for (int i = 0; i < n; i++) {
-            System.out.println("\nProdotto " + (i + 1));
+            System.out.println("\nInserisci il prodotto " + (i + 1));
 
-            System.out.print("Tipo di prodotto (smartphone / televisore / cuffie): ");
+            System.out.print("Tipo (smartphone / televisore / cuffie): ");
             String tipo = scanner.nextLine().toLowerCase();
 
             System.out.print("Codice: ");
@@ -68,15 +64,12 @@ public class Carrello {
             }
         }
 
-        // Stampa del carrello
-        System.out.println("\n Prodotti nel carrello:");
+        // Stampa dei prodotti
+        System.out.println("Carrello:");
         for (int i = 0; i < carrello.length; i++) {
-            Prodotto p = carrello[i];
-            System.out.println(
-                    "[" + (i + 1) + "] " + p.getNome() + " - " + p.getMarca() + " - Prezzo: " + p.getPrezzo() + "Eur + "
-                            + p.getIva() + "IVA");
+            System.out.println(carrello[i]);
         }
 
         scanner.close();
     }
-};
+}

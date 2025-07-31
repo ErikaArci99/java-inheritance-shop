@@ -30,4 +30,11 @@ public class Cuffie extends Prodotto {
         this.wireless = wireless;
     }
 
+    // Override del metodo toString per una rappresentazione leggibile
+    @Override
+    public String toString() {
+        return "Cuffie - Codice: " + codice + ", Nome: " + nome + ", Marca: " + marca +
+                ", Prezzo: " + prezzo + "€, IVA: " + iva + "%, Colore: " + colore +
+                ", Wireless: " + (wireless ? "Sì" : "No");
+    }
 }
